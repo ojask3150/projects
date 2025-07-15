@@ -1,0 +1,82 @@
+@font-face{
+    src:url(fonts/Tagesschrift-Regular.ttf);
+    font-family: Tagesschrift;
+}
+html{
+    background-color: aqua;
+    font-family: Tagesschrift;
+}
+
+#name{
+    display:flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    margin-top: 15%;
+    height: 20px;
+    padding: 5px;
+    width: 50%;
+    font-family: Tagesschrift;
+    border: 2px dotted black;
+}
+input[type="text"]::placeholder {
+            text-align: center;
+        }
+#fetchbtn{
+    display:flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    margin-top: 5%;
+    height: 30px;
+    width: 70px;
+    padding: 10px;
+    font-family: Tagesschrift;
+}
+
+.spritecard img{
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    height: 200px;
+    width: 200px;
+}
+.spritecard::after{
+    content: '';
+    display: flex;
+    position: relative;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    translate: 0 -100%;
+    height: 200px;
+    width: 200px;
+    z-index: -1;
+    background: linear-gradient(
+    60deg,
+    #ff0000, #ff7300, #fffb00, #48ff00,
+    #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+    );
+    background-size: 400%;
+    border-radius: 1.5rem; /* Optional rounded corners */
+    animation: animate-border 8s linear infinite;
+}
+@keyframes animate-border {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
